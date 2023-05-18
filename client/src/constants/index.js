@@ -47,3 +47,14 @@ export const surpriseMePrompts = [
     'A Space Shuttle flying above Cape Town, digital art',
   ];
 
+  export const navLinks = [
+    {
+      id: "community",
+      title: "Community",
+    },
+    {
+      id: "create",
+      title: "Create",
+    },
+  ];
+
