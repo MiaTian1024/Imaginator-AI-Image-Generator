@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 
 import { logo } from './assets';
-import { Home, CreatePost, Nav } from './pages'
+import { Home, CreatePost, Nav, Community } from './pages'
 
 const App = () => (
     <BrowserRouter>
@@ -14,6 +14,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreatePost />}/>
+          <Route path="/community" element={<Community />}/>
         </Routes>
       </main>      
     </BrowserRouter>
