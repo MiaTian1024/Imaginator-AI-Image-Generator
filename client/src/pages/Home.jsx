@@ -3,9 +3,13 @@ import { Stars } from '../components';
 
 const Home = () => {
   return (
-    <div className="z-0">
-      <Stars />
+    <div>
+      <div className='absolute my-60 mx-auto'>      
+        <h1 className='font-extrabold text-white text-[32px] z-10'>Free Your Imagination</h1>      
+      </div>
+      <Stars /> 
     </div>
+    
   );
 }
 
