@@ -1,14 +1,16 @@
 import Card from "./Card";
 import FormField from "./FormField";
 import Loader from "./Loader";
-import Stars from './Stars';
+import StarsCanvas from './Stars';
+import EarthCanvas from "./Earth";
 import { TypingText, TitleText } from './CustomTexts'
 
 export {
     Card,
     FormField,
     Loader,
-    Stars,
+    StarsCanvas,
+    EarthCanvas,
     TypingText,
     TitleText,
 }

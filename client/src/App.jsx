@@ -10,7 +10,7 @@ const App = () => (
         <Nav />         
       </header>
       
-      <main className="sm:p-8 px-4 py-8 w-full bg-primary">
+      <main className="sm:p-8 px-4 py-8 w-full">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreatePost />}/>
