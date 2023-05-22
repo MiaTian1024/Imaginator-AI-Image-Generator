@@ -61,20 +61,21 @@ const Home = () => {
   };
 
   return (
-    <section className='sm:px-8 px-4 max-w-7xl mx-auto py-20 z-0'>
-      <div>
-        <h1 className='font-extrabold text-white text-[32px]'>The Community Showcase</h1>
-      </div>
+    <section className='sm:px-8 px-4 max-w-8xl mx-auto py-20 z-0'>
+      <div className='flex justify-center items-center flex-row gap-10'>
+        <div>
+          <h1 className='font-extrabold text-white text-[32px]'>The Community Showcase</h1>
+        </div>
 
-      <div className='mt-10'>
+      <div>
         <FormField 
-          labelName="Search posts"
           type="text"
           name="text"
           placeholder="Search posts..."
           value={searchText}
           handleChange={handleSearchChange}
         />
+      </div>
       </div>
 
       <div className="mt-10">

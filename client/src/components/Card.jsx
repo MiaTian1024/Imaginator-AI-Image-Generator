@@ -19,7 +19,7 @@ const Card = ({ _id, name, prompt, photo}) => {
       >
     <div>
       <img
-        className="w-full h-auto object-cover rounded-xl"
+        className="w-full h-auto object-cover rounded-xl transition-transform duration-300 transform hover:scale-110"
         src={photo}
         alt={prompt}
       />
