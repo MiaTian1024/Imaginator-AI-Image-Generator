@@ -62,11 +62,6 @@ const Home = () => {
 
   return (
     <section className='sm:px-8 px-4 max-w-8xl mx-auto py-20 z-0'>
-      <div className='flex justify-center items-center flex-row gap-10'>
-        <div>
-          <h1 className='font-extrabold text-white text-[32px]'>The Community Showcase</h1>
-        </div>
-
       <div>
         <FormField 
           type="text"
@@ -76,8 +71,7 @@ const Home = () => {
           handleChange={handleSearchChange}
         />
       </div>
-      </div>
-
+    
       <div className="mt-10">
         {loading ? (
           <div className="flex justify-center items-center">

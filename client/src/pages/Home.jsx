@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { StarsCanvas, EarthCanvas, TypingText } from '../components';
+import { StarsCanvas, EarthCanvas} from '../components';
 import { staggerContainer } from '../utils/motion';
 
 
@@ -12,23 +11,10 @@ const Home = () => {
         <StarsCanvas />
         </div>
 
-        <div className='absolute h-[350px] z-1'> 
+        <div className='absolute top-13 h-[250px] z-1'> 
         <EarthCanvas />
         </div> 
-        
-        <div>
-        <motion.div
-        variants={staggerContainer}
-        initial='hidden'
-        whileInView='show'
-        viewport={{once: false, amount:0.25 }}
-        className='absolute top-20 left-10'
-        >   
-        <TypingText title='Free Your Imagination' textStyles='text-center' />          
-        </motion.div>  
-        </div>     
-       
-          
+                
     </div>     
        
   );
