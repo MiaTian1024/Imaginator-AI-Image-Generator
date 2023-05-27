@@ -87,7 +87,7 @@ const CreatePost = () => {
 
       <form className="mt-16" onSubmit={handleSubmit}>
        <div className='flex flex-row  justify-center gap-10'>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-1 flex-col gap-5">
           <FormField
               labelName="Your Name"
               type="text"
