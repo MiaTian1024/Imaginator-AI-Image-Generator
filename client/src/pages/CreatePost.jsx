@@ -57,7 +57,7 @@ const CreatePost = () => {
         })
 
         await response.json();
-        navigate('/')
+        navigate('/community')
       } catch (err) {
         alert(err)
       } finally {
@@ -80,13 +80,13 @@ const CreatePost = () => {
   }
 
   return (
-    <section className="max-w-7xl mx-auto py-20 z-0">
+    <section className="sm:px-8 px-4 py-20 z-0 flex flex-col justify-center items-center">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[16px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
+        <p className="mt-2 text-secondary text-[18px] max-w-7xl">Generate an imaginative image through DALL-E AI and share it with the community</p>
       </div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-16" onSubmit={handleSubmit}>
+       <div className='flex flex-row  justify-center gap-10'>
         <div className="flex flex-col gap-5">
           <FormField
               labelName="Your Name"
@@ -108,7 +108,17 @@ const CreatePost = () => {
               handleSurpriseMe={handleSurpriseMe}
             />
 
-            <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
+            <div className="mt-5 ">
+              <button
+                type="button"
+                onClick={generateImage}
+                className="text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              > 
+                {generatingImg ? 'Generating...' : 'Generate'}
+              </button>
+            </div>
+          </div>
+            <div className=" relative bg-zinc-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
               { form.photo ? (
                 <img
                   src={form.photo}
@@ -119,7 +129,7 @@ const CreatePost = () => {
                 <img
                 src={preview}
                 alt="preview"
-                className="w-9/12 h-9/12 object-contain opacity-40"
+                className="w-9/12 h-9/12 object-contain bg-zinc-300 opacity-60"
                 />
               )}
 
@@ -130,19 +140,12 @@ const CreatePost = () => {
               )}
             </div>
         </div>
+       
+       
+       
 
-        <div className="mt-5 flex gap-5">
-          <button
-            type="button"
-            onClick={generateImage}
-            className="text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-          > 
-            {generatingImg ? 'Generating...' : 'Generate'}
-          </button>
-        </div>
-
-        <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
+        <div className="mt-20 flex flex-col justify-center gap-5">
+          <p className="mt-2 text-secondary text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
           <button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
