@@ -25,7 +25,7 @@ const FormField = ({
             onClick={handleSurpriseMe}
             className="font-semibold text-xs bg-green-700 py-1 px-2 rounded-[5px] text-white"
           >
-            Suprise me
+            Surprise me
           </button>
         )}
       </div>
