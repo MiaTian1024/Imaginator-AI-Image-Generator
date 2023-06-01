@@ -15,7 +15,7 @@ cloudinary.config({
 })
 
 // Get all posts
-router.route('/').get(async (req, res) => {
+router.route('/community').get(async (req, res) => {
   try {
     const posts = await Post.find({});
 
