@@ -16,7 +16,7 @@ router.route('/').get((req, res) => {
     res.send('Hello from DALL-E!')
 })
 
-router.route('/create').post(async (req, res) => {
+router.route('/').post(async (req, res) => {
     try {
         const { prompt } = req.body;
         const aiResponse = await openai.createImage({

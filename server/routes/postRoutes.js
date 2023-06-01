@@ -15,7 +15,7 @@ cloudinary.config({
 })
 
 // Get all posts
-router.route('/community').get(async (req, res) => {
+router.route('/').get(async (req, res) => {
   try {
     const posts = await Post.find({});
 
@@ -26,7 +26,7 @@ router.route('/community').get(async (req, res) => {
 })
 
 // Create a post
-router.route('/community').post(async (req, res) => {
+router.route('/').post(async (req, res) => {
   try {
     const { name, prompt, photo } = req.body;
     const photoUrl = await cloudinary.uploader.upload(photo);
