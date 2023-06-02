@@ -12,7 +12,7 @@ const Nav = () => {
 
   return (
     <nav className={`${styles.paddingX} w-full flex items-center bg-primary py-5 fixed top-0 z-10`}>
-      <div className='w-full flex justify-between items-center max-w-7xl'>
+      <div className='w-full flex justify-between items-center'>
         <Link to='/' className='flex items-center gap-2'>
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '> Imaginator </p>

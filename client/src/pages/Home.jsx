@@ -1,7 +1,5 @@
 import React from 'react';
-import { StarsCanvas, EarthCanvas} from '../components';
-import { staggerContainer } from '../utils/motion';
-
+import { StarsCanvas } from '../components';
 
 const Home = () => {
   return (
@@ -11,10 +9,6 @@ const Home = () => {
         <StarsCanvas />
         </div>
 
-        <div className='absolute top-13 h-[250px] z-1'> 
-        <EarthCanvas />
-        </div> 
-                
     </div>     
        
   );

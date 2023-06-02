@@ -1,25 +1,14 @@
 import React from 'react';
-import {Tilt} from 'react-tilt'
-import { motion } from 'framer-motion'
 
 import { download } from '../assets';
 import { downloadImage } from '../utils';
-import { fadeIn } from '../utils/motion'
-
 
 const Card = ({ _id, name, prompt, photo}) => {
   return (
-      <Tilt
-        options={{
-          max:45,
-          scale:1,
-          speed:450
-        }}
-        className="rounded-xl group relative shadow-card hover:shadow-cardhover card"
-      >
-    <div>
+     
+    <div  className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
       <img
-        className="w-full h-auto object-cover rounded-xl transition-transform duration-300 transform hover:scale-110"
+        className="w-full h-auto object-cover rounded-xl transition-transform duration-300 transform"
         src={photo}
         alt={prompt}
       />
@@ -36,7 +25,7 @@ const Card = ({ _id, name, prompt, photo}) => {
           </button>
         </div>
       </div>
-    </div>
-    </Tilt>
+    </div>   
 )}
+
 export default Card;
