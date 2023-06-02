@@ -21,9 +21,9 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true)
         const response = await fetch ('https://imaginator-ai-image-generator.onrender.com/api/v1/dalle', {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({ prompt: form.prompt }),
       })
@@ -49,9 +49,9 @@ const CreatePost = () => {
 
       try {
         const response = await fetch ('https://imaginator-ai-image-generator.onrender.com/api/v1/post', {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(form)
         })
@@ -140,9 +140,6 @@ const CreatePost = () => {
               )}
             </div>
         </div>
-       
-       
-       
 
         <div className="mt-20 flex flex-col justify-center gap-5">
           <p className="mt-2 text-secondary text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
