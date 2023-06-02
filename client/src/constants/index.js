@@ -49,11 +49,13 @@ export const surpriseMePrompts = [
 
   export const navLinks = [
     {
-      id: "/community",
+      id: "community",
+      href: "/community",
       title: "Community",
     },
     {
-      id: "/create",
+      id: "create",
+      href: "/create",
       title: "Create",
     },
   ];

@@ -25,7 +25,7 @@ const Nav = () => {
               className={`${active === nav.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <Link to={`${nav.id}`}>{nav.title}</Link>
+              <Link to={nav.href}>{nav.title}</Link>
             </li>
           ))}
         </ul>
@@ -49,7 +49,7 @@ const Nav = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <Link to={`${nav.id}`}>{nav.title}</Link>
+                  <Link to={nav.href}>{nav.title}</Link>
                 </li>
               ))}
             </ul>
