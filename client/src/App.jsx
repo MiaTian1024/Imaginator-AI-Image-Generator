@@ -11,7 +11,7 @@ const App = () => (
       
       <main className="sm:p-8 px-4 py-8 w-full">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/create" element={<CreatePost />}/>
           <Route path="/community" element={<Community />}/>
         </Routes>
